@@ -1113,6 +1113,9 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
        * @param {key} Locale key.
        */
       var useLanguage = function (key) {
+        if ($uses === key)
+          return;
+          
         $uses = key;
 
         // make sure to store new language key before triggering success event
